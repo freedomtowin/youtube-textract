@@ -1,0 +1,13 @@
+version: '3'
+services:
+  foolproof-youtube: 
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5000:5000"
+      - "8889:9999"
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - C:\Users\rohan\rk-foolproof-youtube-summarizer\working:/root/working
